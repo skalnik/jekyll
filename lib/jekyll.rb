@@ -13,6 +13,7 @@ require 'yaml'
 # 3rd party
 require 'liquid'
 require 'redcloth'
+require 'haml'
 
 # internal requires
 require 'jekyll/core_ext'

@@ -82,6 +82,10 @@ module Jekyll
     def textile(content)
       RedCloth.new(content).to_html
     end
+    
+    def haml(content)
+      Haml::Engine.new(content).render
+    end
 
     # Do the actual work of processing the site and generating the
     # real deal.

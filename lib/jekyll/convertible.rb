@@ -36,6 +36,9 @@ module Jekyll
       when 'markdown'
         self.ext = ".html"
         self.content = self.site.markdown(self.content)
+      when 'haml'
+        self.ext = ".html"
+        self.content = self.site.haml(self.content)
       end
     end
 
@@ -49,6 +52,8 @@ module Jekyll
         return 'textile'
       when /markdown/i, /mkdn/i, /md/i
         return 'markdown'
+      when /haml/i
+        return 'haml'
       end
       return 'unknown'
     end
